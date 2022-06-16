@@ -1,2 +1,7 @@
-# SENACRS
- Trabalhos e projetos realizados no curso Análise e Desenvolvimento de Sistemas.
+Solicitado:
+- Criação de classes
+- Manipulação de objetos
+- Manipulação de listas
+
+Extra:
+- Separação do código em arquivos
