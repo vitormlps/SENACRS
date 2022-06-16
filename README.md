@@ -1,4 +1,1 @@
-# SENACRS
- Trabalhos e projetos realizados no curso Análise e Desenvolvimento de Sistemas.
-
-Cada trabalho/projeto está separado em uma branch.
+Projeto final da matéria de 1º semestre Desenvolvimento de Interfaces para Web.
