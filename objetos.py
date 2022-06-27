@@ -1,41 +1,51 @@
-## IMPORTS ## ----------------------------------------------------------------
+# IMPORTS ## ----------------------------------------------------------------
+from dataclasses import dataclass
 
-## CHAMADAS ## ----------------------------------------------------------------
-lst_estados = list()
-lst_cidades = list()
+# CLASSES ## ----------------------------------------------------------------
+"""
+Dataclass foi adicionado ao Python na versão 3.7 (PEP 557)
 
-## Classes ## ----------------------------------------------------------------
+É um módulo que proporciona um decorador e funções pra gerar
+automaticamente metodos especiais como __init__() e __repr__()
+https://peps.python.org/pep-0557/#specification
+"""
 
-class Estados():
-    def __init__(self, nome_estado, uf_estado):
-        self.__nome_estado = nome_estado
-        self.__uf_estado = uf_estado
-        self.__cidades_estado = list()
+#frozen (emula objetos "read-only") e eq (compara a classe como se fosse uma tupla) tornam a dataclass hashable por virar imutável
+#https://docs.python.org/3/library/dataclasses.html
 
-    def get_nome(self):
-        return self.__nome_estado
+@dataclass(frozen=True, eq=True)
+class Estado():
+    """Define objetos estado"""
+    __nome: str
+    __uf: str
 
-    def get_UF(self):
-        return self.__uf_estado
-    
-    def get_relacao(self):
-        return self.__cidades_estado
-    
-    def add_cidades_estado(self, cidade):
-        self.__cidades_estado.append(cidade)
+    @property
+    def nome(self) -> str:
+        """Nome do estado"""
+        return self.__nome
 
-#----------------------------------------------------------------
+    @property
+    def uf(self) -> str:
+        """UF do estado"""
+        return self.__uf
 
-class Cidades():
-    def __init__(self, nome_cidade):
-        self.__nome_cidade = nome_cidade
-        self.__qt_casos = 0
-    
-    def get_nome(self):
-        return self.__nome_cidade
-    
-    def get_casos(self):
-        return self.__qt_casos
 
-    def atualizarCasos(self, novosCasos):
-        self.__qt_casos += novosCasos
+@dataclass
+class Cidade():
+    """Define objetos cidade"""
+    __nome: str
+    __qtCasos: int = 0
+
+    @property
+    def nome(self) -> str:
+        """Nome da cidade"""
+        return self.__nome
+
+    @property
+    def casos(self) -> int:
+        """Quantidade de casos registrados"""
+        return self.__qtCasos
+
+    def atualizaCasos(self, novosCasos) -> None:
+        """Atualiza quantidade de casos de uma cidade"""
+        self.__qtCasos += novosCasos
