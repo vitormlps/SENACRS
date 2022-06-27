@@ -1,7 +1,7 @@
 Solicitado:
 - Criação de classes
 - Comunicação entre objetos
-- Utilizaçãp de dicionário
+- Utilização de dicionário
 - Manipulação de arquivo txt
 
 Extra:
