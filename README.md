@@ -1,7 +1,8 @@
 Solicitado:
 - Criação de classes
-- Manipulação de objetos
-- Manipulação de dicionário
+- Comunicação entre objetos
+- Utilizaçãp de dicionário
+- Manipulação de arquivo txt
 
 Extra:
 - Separação do código em arquivos
