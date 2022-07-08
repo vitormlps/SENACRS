@@ -6,5 +6,5 @@ Solicitado:
 
 Extra:
 - Separação do código em arquivos
-- Experimento com dependency injection
+- Experimento com dependency injection para entender um pouco de DIP
 - Utilização de dataclasses e type hints
