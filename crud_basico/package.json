@@ -1,0 +1,23 @@
+{
+  "name": "crud_produtos",
+  "version": "1.0.0",
+  "description": "Realiza o CRUD de produtos.",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "start": "main.js"
+  },
+  "keywords": [
+    "CRUD",
+    "Produtos"
+  ],
+  "author": "Vitor Lopes",
+  "license": "ISC",
+  "dependencies": {
+    "node": "^18.8.0",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.2"
+  }
+}
