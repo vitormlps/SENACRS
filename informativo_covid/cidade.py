@@ -6,7 +6,7 @@ class Cidade:
     """Define objetos cidade"""
 
     __nome: str
-    __qtCasos: int = 0
+    __qtdeCasos: int = 0
 
     @property
     def nome(self) -> str:
@@ -20,9 +20,9 @@ class Cidade:
     @property
     def casos(self) -> int:
         """Quantidade de casos registrados"""
-        return self.__qtCasos
+        return self.__qtdeCasos
 
     @casos.setter
     def atualizaCasos(self, novosCasos) -> None:
         """Atualiza quantidade de casos de uma cidade"""
-        self.__qtCasos += novosCasos
+        self.__qtdeCasos += novosCasos
