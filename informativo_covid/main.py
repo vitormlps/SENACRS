@@ -1,36 +1,39 @@
+# IMPORTS ## ----------------------------------------------------------------
 import sys
-from informativo import Informativo
-from manipulador_txt import ManipuladorTxt
-from menu import printMenu
-from funcionalidades import isNum
+from informativo import *
 
+"""
+Type hints foi adicionado ao Python na versão 3.5 (PEP 484)
 
+Adiciona semântica a annotations
+https://peps.python.org/pep-0484/
+"""
+
+# MAIN ## ----------------------------------------------------------------
 def main() -> None:
     """Inicializador"""
 
     info = Informativo()
     editor = ManipuladorTxt()
-    dictOpcoes = {
-        1: info.cadastraEstados,
-        2: info.cadastraCidades,
-        3: info.relataEstados,
-        4: info.relataCidades,
-        5: info.atualizaCasosEmCidades,
-    }
+    dictOpcoes = {1: info.cadastraEstados,
+                2: info.cadastraCidades,
+                3: info.relataEstados,
+                4: info.relataCidades,
+                5: info.atualizaCasosEmCidades}
 
-    info.dictCovid = editor.lerArquivoTxt(info.dictCovid)
+    info.setDictCovid(editor.lerArquivoTxt(info.dictCovid))
 
     while True:
         printMenu()
         opcao = isNum(input("Qual opção deseja? "))
-
         if opcao >= 6:
             print("Opção inválida. Digite novamente.")
 
         elif 1 <= opcao <= 5:
-            print("Ainda não existem Estados no Informativo.") if 2 <= opcao <= 5 and (
-                len(info.dictCovid) <= 0
-            ) else dictOpcoes[opcao]()
+            if 2 <= opcao <= 5 and (len(info.dictCovid) <= 0):
+                print("Ainda não existem Estados no Informativo.")
+            else:
+                dictOpcoes[opcao]()
 
         else:
             editor.gravarArquivoTxt(info.dictCovid)
@@ -38,12 +41,11 @@ def main() -> None:
             sys.exit()
 
 
-if __name__ == "__main__":
-    print(
-        """
+# RUN ## ----------------------------------------------------------------
+if __name__ == '__main__':
+    print("""
 ######################################################
 ## Bem vindx ao informativo brasileiro de COVID-19! ##
 ######################################################
-    """
-    )
+    """)
     main()
