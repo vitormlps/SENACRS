@@ -1,0 +1,26 @@
+<script src="/node_modules/spotify-web-api-js/src/spotify-web-api.js"></script>
+<script src="../autenticacao/script.js"></script>
+<script>
+  (function () {
+    var accessKey = 'spotify_access';
+    var params = getHashParams();
+
+    var access_token = params.access_token,
+      state = params.state,
+      storedState = localStorage.getItem(stateKey);
+    if (access_token && (state == null || state !== storedState)) {
+      alert('There was an error during the authentication');
+    } else {
+      localStorage.removeItem(stateKey);
+      localStorage.setItem(accessKey, access_token);
+      if (access_token) {
+        console.log(params);
+        var urlRedirect = atob(state);
+        var to = params.to;
+        document.cookie = access_token;
+        // window.location = 'http://localhost:8001/' + urlRedirect;
+        window.location = 'https://vitormlps.github.io/dashboardspotify/' + urlRedirect //+ '?access_token='  + access_token;
+      }
+    }
+  })();
+</script>

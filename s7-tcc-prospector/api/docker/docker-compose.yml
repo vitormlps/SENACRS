@@ -1,0 +1,46 @@
+services:
+  prospector-api:
+    container_name: prospector-api
+    image: datatrib-prospector-api
+    privileged: true
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+      target: development
+    ports:
+      - 8000:8000
+    volumes:
+      - ../:/home/api
+    environment:
+      ENV: development
+    env_file:
+      - ../.env
+    restart: unless-stopped
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - dev_network
+
+  database:
+    container_name: database
+    hostname: prospector_db
+    image: postgres:15-bookworm
+    ports:
+      - 5432:5432
+    env_file:
+      - ../.env
+    volumes:
+      - ./database-volume:/var/lib/postgresql/data/
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d dev_prospector -U root"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - dev_network
+
+networks:
+  dev_network:
+    name: dev_network
+    external: false

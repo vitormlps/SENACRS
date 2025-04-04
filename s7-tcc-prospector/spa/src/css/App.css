@@ -1,0 +1,381 @@
+html,
+body {
+	min-width: 100vw;
+	min-height: 100vh;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	line-height: 1.5;
+	font-weight: 400;
+
+	font-family: 'Roboto', 'Trebuchet MS', 'Montserrat', 'Oxygen', 'Ubuntu', 'Cantarell',
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.page {
+	height: 100vh;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex.wrap {
+	flex-wrap: wrap;
+}
+
+.flex.start {
+	align-content: flex-start;
+}
+
+.flex.end {
+	align-content: flex-end;
+}
+
+.flex.row {
+	flex-direction: row;
+}
+
+.flex.column {
+	flex-direction: column;
+}
+
+.flex.space-between {
+	justify-content: space-between;
+}
+
+.flex.space-evenly {
+	justify-content: space-evenly;
+}
+
+.flex.center {
+	align-items: center;
+	justify-content: center;
+}
+.flex.center-y {
+	align-items: center;
+}
+.flex.center-x {
+	justify-content: center;
+}
+
+.horizontal-center {
+	justify-content: center;
+}
+
+.of-hidden {
+	overflow: hidden;
+}
+
+.scroll {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
+}
+
+.outer-scroll {
+	overflow-x: hidden;
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
+}
+
+.container {
+	width: 100%;
+}
+
+.jar {
+	width: 65%;
+}
+
+.half {
+	width: 45%;
+}
+
+.box {
+	width: 33%;
+}
+
+.container.app-header {
+	height: 5vh;
+}
+
+.container.h-1 {
+	height: 10vh;
+}
+.container.h-2 {
+	height: 20vh;
+}
+.container.h-3 {
+	height: 30vh;
+}
+.container.h-4 {
+	height: 40vh;
+}
+.container.h-5 {
+	height: 50vh;
+}
+.container.h-6 {
+	height: 60vh;
+}
+.container.h-7 {
+	height: 70vh;
+}
+.container.h-8 {
+	height: 80vh;
+}
+
+.container.app-page {
+	height: 90vh;
+}
+
+.container.img-modal {
+	height: 100vh;
+}
+
+.container.bg {
+	background-color: #fafafa;
+}
+
+input::placeholder {
+	font-size: 11pt;
+}
+
+.text-8 {
+	font-size: 8pt;
+}
+.text-10 {
+	font-size: 10pt;
+}
+.text-11 {
+	font-size: 11pt;
+}
+.text {
+	font-size: 12pt;
+}
+.text-14 {
+	font-size: 14pt;
+}
+.text-16 {
+	font-size: 16pt;
+}
+.text-18 {
+	font-size: 18pt;
+}
+.text-20 {
+	font-size: 20pt;
+}
+.text-32 {
+	font-size: 32pt;
+}
+.text-40 {
+	font-size: 40pt;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.ellipsis {
+	text-overflow: ellipsis;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.normal {
+	font-weight: normal !important;
+}
+
+.primary {
+	color: #2a5caa !important;
+}
+
+.secondary {
+	color: #20bec6 !important;
+}
+
+.black {
+	color: #303030 !important;
+}
+
+.gray {
+	color: #7c7c7c !important;
+}
+
+.white {
+	color: #fafafa !important;
+}
+
+.img-icon {
+	height: 25px;
+}
+
+.no-pm {
+	padding: 0;
+	margin: 0;
+}
+
+.app-padding {
+	padding: 0 2.5%;
+}
+
+.app-margin {
+	margin: 0 2.5%;
+}
+
+.p-0 {
+	padding: 0;
+}
+.p-1 {
+	padding: 1%;
+}
+.p-2 {
+	padding: 2%;
+}
+.p-3 {
+	padding: 3%;
+}
+.p-4 {
+	padding: 4%;
+}
+.p-5 {
+	padding: 5%;
+}
+.px-1 {
+	padding: 0 1%;
+}
+.px-2 {
+	padding: 0 2%;
+}
+.px-3 {
+	padding: 0 3%;
+}
+.px-4 {
+	padding: 0 4%;
+}
+.px-5 {
+	padding: 0 5%;
+}
+.py-1 {
+	padding: 1% 0;
+}
+.py-2 {
+	padding: 2% 0;
+}
+.py-3 {
+	padding: 3% 0;
+}
+.py-4 {
+	padding: 4% 0;
+}
+.py-5 {
+	padding: 5% 0;
+}
+
+.m-0 {
+	margin: 0;
+}
+.m-1 {
+	margin: 1%;
+}
+.m-2 {
+	margin: 2%;
+}
+.m-3 {
+	margin: 3%;
+}
+.m-4 {
+	margin: 4%;
+}
+.m-5 {
+	margin: 5%;
+}
+.mx-1 {
+	margin: 0 1%;
+}
+.mx-2 {
+	margin: 0 2%;
+}
+.mx-3 {
+	margin: 0 3%;
+}
+.mx-4 {
+	margin: 0 4%;
+}
+.mx-5 {
+	margin: 0 5%;
+}
+.my-1 {
+	margin: 1% 0;
+}
+.my-2 {
+	margin: 2% 0;
+}
+.my-3 {
+	margin: 3% 0;
+}
+.my-4 {
+	margin: 4% 0;
+}
+.my-5 {
+	margin: 5% 0;
+}
+.my-10 {
+	margin: 10% 0;
+}
+.gap-1 {
+	gap: 1%;
+}
+.gap-2 {
+	gap: 2%;
+}
+.gap-3 {
+	gap: 3%;
+}
+.gap-4 {
+	gap: 4%;
+}
+.gap-5 {
+	gap: 5%;
+}
+.gap-10 {
+	gap: 10%;
+}
+
+.zoom-modal-btn {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+}
+
+textarea:focus {
+	outline-color: #2a5caa;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: none;
+}

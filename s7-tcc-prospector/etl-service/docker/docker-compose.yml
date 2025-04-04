@@ -1,0 +1,25 @@
+services:
+  prospector-etl-service:
+    container_name: prospector-etl-service
+    image: nunes-barcelos-prospector-etl-service
+    privileged: true
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+      target: development
+    ports:
+      - 8080:8080
+    volumes:
+      - ../:/home/etl
+    environment:
+      ENV: development
+    env_file:
+      - ../.env
+    restart: unless-stopped
+    networks:
+      - dev_network
+
+networks:
+  dev_network:
+    name: dev_network
+    external: false

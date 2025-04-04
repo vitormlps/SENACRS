@@ -1,0 +1,14 @@
+# NPM stuff
+/node_modules
+package-lock.json
+yarn-error.log
+yarn.lock
+
+# Files
+.env
+pre-commit-config*
+OLD_*
+.nyc_output
+coverage
+build/
+postgres-data

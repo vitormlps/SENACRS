@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+*.yaml
+*.md
+
+.env_development
+.env_production
+docker-compose_development.yml
+docker-compose_production.yml
+
+.git
+.gitignore
+Dockerfile
+.dockerignore

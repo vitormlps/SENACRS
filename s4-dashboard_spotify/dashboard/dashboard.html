@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../login/img/Spotify-icon.png" type="image/x-icon">
+    <title>Dashfy</title>
+</head>
+
+<body id="all">
+    <main class="container">
+        <nav class="navbar">
+            <div class="logo-box">
+                <img class="logo" src="../login/img/Spotify_Logo_RGB_Green.png" alt="Spotify logo">
+            </div>
+            <div class="button-box">
+                <button class="button" id="pesquisa" type='button' onClick="realizarPesquisa()">
+                    Pesquisa de Satisfação
+                </button>
+            </div>
+            <div class="button-box">
+                <button class="button" id="logout" type='button' onClick="deslogar()"> Log out </button>
+            </div>
+        </nav>
+        <section class="dashboard">
+            <div class="box" id="perfil">
+                <h2>
+                    <span id="nome">Fulano</span>, seu estilo é
+                </h2>
+                <h1 id="estilo"> Nenhum </h1>
+                <div class="button-box">
+                    <button class="button" id="compartilhar" type='button' onClick="download()"> Compartilhar
+                    </button>
+                </div>
+            </div>
+
+            <div class="box" id="grafico-generos">
+                <figure id="generos"></figure>
+            </div>
+
+            <div class="box" id="grafico-artistas">
+                <figure id="artistas"></figure>
+            </div>
+
+            <div class="box" id="grafico-musicas">
+                <figure id="musicas"></figure>
+            </div>
+
+            <script src="./botoes.js"></script>
+            <script src="./graficos.js"></script>
+            <script src="../autenticacao/script.js"></script>
+        </section>
+    </main>
+</body>
+
+</html>

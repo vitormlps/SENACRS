@@ -1,0 +1,44 @@
+{
+  "name": "conserva.ai-spa",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "VITE_APP_PUBLIC_PATH='/' vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.2.96",
+    "sass": "^1.43.2",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^2.4.4",
+    "vite-plugin-vue2": "^1.8.1",
+    "vue-template-compiler": "^2.7.14"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue2": "^2.0.1",
+    "@vue/composition-api": "^1.1.4",
+    "axios": "^1.4.0",
+    "http-beautify": "^1.1.2",
+    "moment": "^2.29.4",
+    "sweetalert2": "^11.7.5",
+    "vue": "2.7",
+    "vue-router": "3.5.1",
+    "vue-sweetalert2": "^5.0.5",
+    "vue-toastification": "^1.7.14",
+    "vuetify": "^2.5.10",
+    "vuex": "3"
+  },
+  "description": "Plataforma web para gestão de estoque de produtos alimentícios.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitormlps/conserva.ai-spa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitormlps/conserva.ai-spa/issues"
+  },
+  "homepage": "https://github.com/vitormlps/conserva.ai-spa#readme"
+}

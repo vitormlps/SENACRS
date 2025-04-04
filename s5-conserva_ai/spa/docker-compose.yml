@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+    dev_conserva_ai_spa:
+        container_name: dev_conserva_ai_spa
+        image: dev_conserva_ai_spa
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - ${PORT}:${PORT}
+        volumes:
+            - ./:/home/spa/
+            - /home/spa/node_modules
+        environment:
+            ENV: ${ENV}
+        env_file: .env
+        networks:
+            - ${NETWORK}
+
+networks:
+    dev_network:
+        name: ${NETWORK}
+        external: false

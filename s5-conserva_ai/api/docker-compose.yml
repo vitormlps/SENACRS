@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  dev_conserva_ai_api:
+    container_name: dev_conserva_ai_api
+    image: dev_conserva_ai_api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ./:/home/api/
+      - /home/api/node_modules
+    environment:
+      ENV: ${ENV}
+    env_file: .env
+    depends_on:
+      - dev_conserva_ai_db
+    networks:
+      - ${NETWORK}
+
+  dev_conserva_ai_db:
+    container_name: dev_${DB_NAME}
+    image: postgres:15
+    environment:
+      PGDATA: /var/lib/postgresql/data/${DB_NAME}/
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_PORT: ${DB_PORT}
+    env_file: .env
+    ports:
+      - 5432:${DB_PORT}
+    expose:
+      - ${DB_PORT}
+    networks:
+      - ${NETWORK}
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    command: -p ${DB_PORT}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+networks:
+  dev_network:
+    name: ${NETWORK}
+    external: false

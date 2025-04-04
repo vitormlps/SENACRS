@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&family=Patrick+Hand&family=Roboto:wght@300;400;500&family=Tai+Heritage+Pro:wght@700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #191414;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    width: 90%;
+    min-height: max-content;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-box {
+    width: 150px;
+}
+
+.logo {
+    width: 100%;
+}
+
+.dashboard {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    width: 50%;
+    height: 44%;
+    margin-top: 2%;
+}
+
+.box#perfil {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#perfil h1,
+#perfil h2 {
+    margin-bottom: 2%;
+}
+
+#perfil span,
+#perfil h1 {
+    color: #1DB954;
+    font-weight: 900;
+}
+
+h1#estilo {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 200px;
+    background-color: #1DB954;
+    padding: 10px 30px;
+}
+
+.button:hover,
+.button:active {
+    background-color: #179242;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+}
+
+.anychart-credits,
+.canvasjs-chart-credit {
+    display: none;
+}
+
+@media only screen and (max-width: 1260px) {
+    h1#estilo {
+        font-size: 4.2rem;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .dashboard {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .box {
+        min-width: 100%;
+        min-height: 40%;
+        margin-top: 10%;
+    }
+
+    h1#estilo {
+        font-size: 2.6rem;
+    }
+
+    .box#perfil {
+        font-size: 1rem;
+        min-height: max-content;
+    }
+}

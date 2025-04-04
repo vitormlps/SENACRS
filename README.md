@@ -1,6 +1,21 @@
-## SENAC/RS
-Trabalhos e projetos realizados no curso Análise e Desenvolvimento de Sistemas.
+# UniSenac/RS
+
+:earth_americas: :us:
+
+## Academic Projects
+
+Some of the projects that I worked on during the Systems Analysis and Development graduation course.
+
+> [!IMPORTANT]
+> Each folder is a different project.
 
 ---
-### Trabalhos/projetos estão separados em pastas.
-Durante 2022/1 criei [umas aulinhas](https://drive.google.com/drive/folders/1s_emjh71WLT8kirlugiMRMpYsFR2eBtv?usp=sharing) para ajudar alguns colegas a entender POO um pouco melhor.
+
+:earth_americas: :brazil:
+
+## Projetos Acadêmicos
+
+Alguns dos projetos que trabalhei durante o curso Análise e Desenvolvimento de Sistemas.
+
+> [!IMPORTANT]
+> Os projetos estão separados em pastas.
